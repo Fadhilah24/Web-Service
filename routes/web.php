@@ -14,8 +14,8 @@
 */
 
 
-	$router->get('/kolam', 'RegistrasikolamController@index');
-    $router->post('/kolam', 'RegistrasikolamController@create');
+	$router->get('/', 'RegistrasikolamController@index');
+    $router->post('/kolam/create', 'RegistrasikolamController@create');
     $router->get('/kolam/{id}', 'RegistrasikolamController@show');
     $router->put('/kolam/{id}', 'RegistrasikolamController@update');
     $router->delete('/kolam/{id}', 'RegistrasikolamController@destroy');
