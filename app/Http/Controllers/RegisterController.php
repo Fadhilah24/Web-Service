@@ -11,7 +11,8 @@ class RegisterController extends Controller
 {
 	public function __construct()
     {
-        $this->middleware("login");
+        //$this->middleware("admin");
+		$this->middleware("login");
     }
 
     public function register(Request $request)

@@ -16,11 +16,11 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->input('token')) {
-            $check =  User::where('token', $request->input('token'))->first();
-			$role  =  User::with('token', $request->input('token'))->where('role', 2);
+        if ($request->header('Authorization')) {
+            $check =  User::where('token', $request->header('Authorization'))->first();
+			$role  =  User::where('role', 2)->first();
 			//$admin = 
-            if (!$check or !$role) {
+            if (!$check&&!$role) {
                 return response('Token Tidak Valid.', 401);
             } else {
                 return $next($request);

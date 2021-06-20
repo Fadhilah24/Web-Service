@@ -16,13 +16,11 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        //if ($request->input('token')) {
-			if ($request->header('Authorization')) {
-			$key = explode(' ',$request->header('Authorization'));
-			$check =  User::where('token', $key[1])->first();
-			$role  =  $check->role;
+        if ($request->header('Authorization')) {
+            $check =  User::where('token', $request->header('Authorization'))->first();
+			$role  =  User::where('role', 100)->first();
 			//$admin = 
-            if (!$check or $role!=2) {
+            if (!$check && $role) {
                 return response('Token Tidak Valid.', 401);
             } else {
                 return $next($request);

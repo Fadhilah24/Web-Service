@@ -6,12 +6,12 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
+use Illuminate\Support\Facades\Cookie;
 class AuthController extends Controller
 {
 	public function __construct()
     {
-        
+         //$this->middleware("admin");
     }
 
     public function register(Request $request)
@@ -87,9 +87,6 @@ class AuthController extends Controller
                     "token" => $newtoken,
                 ]
             ];
-			//return response()->header('Authorization', $newtoken);
-			return response(view('regus'), 200, ['Authorization' => $newtoken]);
-			//return redirect('/regus');
         } else {
             $out = [
                 "message" => "login_vailed",
@@ -114,7 +111,11 @@ function generateRandomString($length = 80)
         }
         return $str;
     }
-
-
+public function regus()
+{
+ 
+	
+	return view('regus');
 }
 
+}

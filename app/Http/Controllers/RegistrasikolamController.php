@@ -5,6 +5,7 @@ use App\Models\RegistrasiKolam;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 class RegistrasikolamController extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class RegistrasikolamController extends Controller
      */
     public function __construct()
     {
-      
+        //$this->middleware("admin");
     }
     
      public function index()
@@ -23,6 +24,7 @@ class RegistrasikolamController extends Controller
        $registrasikolam = RegistrasiKolam::all();
        return response()->json($registrasikolam);
      }
+	 
 	public function input()
 {
  
