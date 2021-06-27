@@ -39,7 +39,7 @@ class RegistrasikolamController extends Controller
        $registrasikolam->lokasi = $request->lokasi;
        $registrasikolam->tanggal_registrasi = $request->tanggal_registrasi;
        $registrasikolam->save();
-       return response()->json($registrasikolam);
+       return redirect()->route('daftar');
      }
 
      public function show($id)
@@ -47,7 +47,11 @@ class RegistrasikolamController extends Controller
         $registrasikolam = RegistrasiKolam::find($id);
         return response()->json($registrasikolam);
      }
-
+	public function edit($id)
+     {
+        $registrasi_kolam = DB::table('registrasi_kolam')->where('id',$id)->get();
+        return view('editkolam',['registrasi_kolam' => $registrasi_kolam]);
+     }
      public function update(Request $request, $id)
      { 
         $registrasikolam= RegistrasiKolam::find($id);
@@ -55,14 +59,15 @@ class RegistrasikolamController extends Controller
         $registrasikolam->nama_kolam = $request->input('nama_kolam');
         $registrasikolam->lokasi = $request->input('lokasi');
         $registrasikolam->save();
-        return response()->json($registrasikolam);
+        //return response()->json($registrasikolam);
+		return redirect()->route('daftar');
      }
 
      public function destroy($id)
      {
         $registrasikolam = RegistrasiKolam::find($id);
         $registrasikolam->delete();
-        return response()->json('Kolam dihapus dari sistem');
+        return redirect()->route('daftar');
      }
    
 }
