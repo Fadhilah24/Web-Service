@@ -32,7 +32,7 @@
         <table class="table table-striped custom-table">
           <thead>
             <tr>
-              
+              <th scope="col">ID Kolam</th>
               <th scope="col">Nama Kolam</th>
               <th scope="col">Lokasi</th>
               <th scope="col">Tanggal Registrasi</th>
@@ -45,7 +45,9 @@
 		   @foreach($registrasi_kolam as $l)   
             <tr scope="row">
 
-              
+				<td>
+                        {{ $l->id }}
+                      </td>
                   
                       <td>
                         {{ $l->nama_kolam }}

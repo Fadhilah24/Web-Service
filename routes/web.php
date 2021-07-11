@@ -25,11 +25,14 @@ use Illuminate\Http\Request;
     'as' => 'daftar', 'uses' => 'ListkolamController@lists'
 ]);
 	$router->get('/', 'RegistrasikolamController@index');
+	$router->get('/sensor', 'SensorkolamController@index');
 	$router->get('kolam/editkolam/{id}', 'RegistrasikolamController@edit');
     $router->post('/kolam/create', 'RegistrasikolamController@create');
+	$router->post('/sensor/create', 'SensorkolamController@create');
     $router->get('/kolam/{id}', 'RegistrasikolamController@show');
     $router->post('/kolam/updatekolam/{id}', 'RegistrasikolamController@update');
 	$router->put('/kolam/updatekolam/{id}', 'RegistrasikolamController@update');
+	$router->put('/sensor/updatesensor/{id}', 'SensorkolamController@update');
     $router->get('/kolam/hapus/{id}', 'RegistrasikolamController@destroy');
 	$router->delete('/kolam/hapus/{id}', 'RegistrasikolamController@destroy');
 

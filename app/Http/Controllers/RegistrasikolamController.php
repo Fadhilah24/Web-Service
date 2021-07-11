@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\RegistrasiKolam;
+use App\Models\SensorKolam;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -34,11 +35,14 @@ class RegistrasikolamController extends Controller
      public function create(Request $request)
      {
        $registrasikolam = new RegistrasiKolam;
+	   $datasensor = new SensorKolam;
 	   $registrasikolam->id = $request->id;
        $registrasikolam->nama_kolam = $request->nama_kolam;
        $registrasikolam->lokasi = $request->lokasi;
        $registrasikolam->tanggal_registrasi = $request->tanggal_registrasi;
        $registrasikolam->save();
+	   $datasensor->id = $registrasikolam->id;
+	   $datasensor->save();
        return redirect()->route('daftar');
      }
 
