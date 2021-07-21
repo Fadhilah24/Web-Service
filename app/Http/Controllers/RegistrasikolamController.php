@@ -16,7 +16,7 @@ class RegistrasikolamController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware("admin");
+        $this->middleware("login");
     }
     
      public function index()

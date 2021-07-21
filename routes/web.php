@@ -18,6 +18,7 @@ use Illuminate\Http\Request;
 ]);
 	$router->post("/register", "RegisterController@register");
 	$router->post("/login", "AuthController@login");
+	$router->get("/loginpage", "LoginController@index");
 	$router->get("/user", "UserController@index");
 	$router->get("/regus", "RegisterController@regus");
 	//$router->get('/kolam/daftar', 'ListkolamController@lists');
@@ -25,9 +26,14 @@ use Illuminate\Http\Request;
     'as' => 'daftar', 'uses' => 'ListkolamController@lists'
 ]);
 	$router->get('/', 'RegistrasikolamController@index');
-	$router->get('/sensor', 'SensorkolamController@index');
+	//$router->get('/sensor', 'SensorkolamController@index');
+	$router->get('/sensor/sensorkolam', [
+    'as' => 'sensorkolam', 'uses' => 'SensorkolamController@index'
+]);
+	$router->get('sensor/lists', 'SensorkolamController@lists');
 	$router->get('kolam/editkolam/{id}', 'RegistrasikolamController@edit');
     $router->post('/kolam/create', 'RegistrasikolamController@create');
+	$router->get('/kolam/input', 'RegistrasikolamController@input');
 	$router->post('/sensor/create', 'SensorkolamController@create');
     $router->get('/kolam/{id}', 'RegistrasikolamController@show');
     $router->post('/kolam/updatekolam/{id}', 'RegistrasikolamController@update');

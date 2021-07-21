@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
 	public function __construct()
     {
-         //$this->middleware("admin");
+        // $this->middleware("admin");
     }
 
     public function register(Request $request)
@@ -74,12 +74,12 @@ class AuthController extends Controller
             return response()->json($out, $out['code']);
     }
 	if (Hash::check($password, $user->password)) {
-            $newtoken  = $this->generateRandomString();
+            $newtoken  = $request->input("token");
 
             $user->update([
                 'token' => $newtoken
             ]);
-
+	$request->session()->put('Authorization', $newtoken);
             $out = [
                 "message" => "login_success",
                 "code"    => 200,

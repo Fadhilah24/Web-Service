@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <h2 class="title">Login Page</h2>
 					
-                    <form action="{{url('/login')}}" method="post">
+                    <!--<form action="{{url('/login')}}" method="post">-->
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -52,10 +52,10 @@
                             </div>
                        
                         <div class="p-t-15">
-                             <input type="submit" name="send" id="send" value="Simpan" class="btn btn--radius-2 btn--blue">
+                             <input type="submit" name="send" id="sendButton" value="Simpan" class="btn btn--radius-2 btn--blue">
 							
                         </div>
-                    </form>
+                    <!--</form>-->
                 </div>
             </div>
         </div>
@@ -70,7 +70,60 @@
 
     <!-- Main JS-->
     <script src="../js/global.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+<script>
+function generate_token(length){
+    //edit the token allowed characters
+    var a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split("");
+    var b = [];  
+    for (var i=0; i<length; i++) {
+        var j = (Math.random() * (a.length-1)).toFixed(0);
+        b[i] = a[j];
+    }
+    return b.join("");
+}
+var token = generate_token(35);
+$('#sendButton').on('click',function(){
+    $.ajax({
+          url: "http://localhost:8000/login",
+          type: 'POST',
+          data: { 
+                  username: $('#username').val(),
+                  password: $('#password').val(),
+				  token: token
+                },
+          //contentType: 'application/json',
+          //headers: {
+                    //"Authorization": token
+                 //},
+				 
+          async: false
+            });
+		$.ajax({
+    url: "http://localhost:8000/regus",
+    type: 'GET',
+    beforeSend : function(xhr) {
+      //set header if JWT is set
+	  xhr.setRequestHeader("Authorization", token);
+	   },
+      success: function(data){
+    window.location.href = '/regus';
+}
+         // XMLHttpRequest.setRequestHeader("Authorization", token);
+      
 
+    
+    
+});
+			window.sessionStorage.setItem("Authorization", token);
+			//top.location.href = '/regus';
+			var sessiontoken = window.sessionStorage.getItem("Authorization");
+			alert(sessiontoken);
+});
+
+</script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>

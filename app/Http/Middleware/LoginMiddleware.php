@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class LoginMiddleware
 {
@@ -16,11 +17,12 @@ class LoginMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if ($request->header('Authorization')) {
-            $check =  User::where('token', $request->header('Authorization'))->first();
-			$role  =  User::where('role', 100)->first();
+        if ($request->session()->has('Authorization')) {
+			$tokenlogin = $request->session()->get('Authorization');
+            $check =  User::where('token', $tokenlogin)->first();
+			$role1  =  DB::table('users')->where('token', $tokenlogin)->value('role');
 			//$admin = 
-            if (!$check && $role) {
+            if (!$check || $role1 !=1) {
                 return response('Token Tidak Valid.', 401);
             } else {
                 return $next($request);

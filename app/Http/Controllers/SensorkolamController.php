@@ -25,6 +25,15 @@ class SensorkolamController extends Controller
        $datasensor = SensorKolam::all();
        return response()->json($datasensor);
      }
+	 public function lists()
+    {
+    	// mengambil data dari table pegawai
+    	//$registrasi_kolam = DB::table('registrasi_kolam')->get();
+ 
+    	// mengirim data pegawai ke view index
+    	return view	('sensor');
+ 
+    }
 	 
 
      public function create(Request $request)
