@@ -1,3 +1,5 @@
+
+
 # Web-Service
 web service untuk mendukung budidaya ikan
 
@@ -9,4 +11,6 @@ Sprint Backlog:
 - Sprint-3: https://drive.google.com/file/d/1mzURHlePDqHKGkuoqlPyfb-3RuVg-0OD/view?usp=sharing
 
 Routing Table:
-- Routing Table Final: https://drive.google.com/file/d/1K5NvpiQkzoOjzh_Y_1PJxZl5NwX1aGFx/view?usp=sharing
+- ![Routing_Table_1](https://user-images.githubusercontent.com/62755456/127272266-04216347-5541-4063-b95b-65733a53c4e5.PNG)
+- ![Routing_Table_2](https://user-images.githubusercontent.com/62755456/127272317-b3232174-87f3-403d-ad31-a9c6aacc62cd.PNG)
+- ![Routing_Table_3](https://user-images.githubusercontent.com/62755456/127272344-a777c3b2-bd26-4e3d-b6df-50ebb2730c79.PNG)
