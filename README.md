@@ -15,4 +15,14 @@ Sprint Backlog:
 ![Routing_Table_3](https://user-images.githubusercontent.com/62755456/127277450-57bc405f-5f0c-47f3-a03b-d82c80c44a5f.PNG)
 
 # Panduan login website/aplikasi
+![Login_page](https://user-images.githubusercontent.com/62755456/127580604-195c5d05-056e-438a-983e-ee3791657571.PNG)
 
+Masukkan Username dan Password dengan data dibawah ini
+
+Username dan Password Admin:
+Username: 3145163442
+Password: vcg282ei58
+
+Username dan Password User:
+Username: fadhilahph
+Password: vcg282ei58
