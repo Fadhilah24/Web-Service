@@ -43,6 +43,11 @@ suhu : value
 
 
 # Type Data
+{
+
+data : value
+
+}
 - id : int
 - username : varchar
 - password : varchar
