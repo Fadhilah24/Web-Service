@@ -20,9 +20,9 @@ Sprint Backlog:
 Masukkan Username dan Password dengan data dibawah ini
 
 Username dan Password Admin:
-Username: 3145163442
-Password: vcg282ei58
+- Username: 3145163442
+- Password: vcg282ei58
 
 Username dan Password User:
-Username: fadhilahph
-Password: vcg282ei58
+- Username: fadhilahph
+- ssword: vcg282ei58
