@@ -26,4 +26,8 @@ Username dan Password Admin:
 
 Username dan Password User:
 - Username: fadhilahph
-- ssword: vcg282ei58
+- Password: vcg282ei58
+# MVC(Model View Controller)
+![mvc_sprint1](https://user-images.githubusercontent.com/62755456/127590719-415f8958-e377-440e-b26a-c5a9b245620a.PNG)
+![mvc_sprint2](https://user-images.githubusercontent.com/62755456/127590731-20bec72c-3579-4c92-be9b-fd8d6d802e13.png)
+![mvc_sprint7](https://user-images.githubusercontent.com/62755456/127590746-f2ff102f-842a-4c47-90f8-706f2f52da6f.png)
