@@ -33,8 +33,13 @@ Username dan Password User:
 # Format data Json Sensor
 {
 
-ph : value
-oksigen : value
+ph : value,
+
+oksigen : value,
+
+suhu : value
+
+}
 
 
 # MVC(Model View Controller)
