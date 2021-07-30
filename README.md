@@ -11,7 +11,7 @@ Sprint Backlog:
 
 # Routing Table
 ![Routing_Table_1_fix](https://user-images.githubusercontent.com/62755456/127582624-9df3b7f1-a4c7-4fc6-befb-4c5bf93894c6.PNG)
-![Routing_Table_2_fix](https://user-images.githubusercontent.com/62755456/127582636-e1211aec-ec80-4593-85e7-48ef3992a830.PNG)
+![Routing_Table_2_fix](https://user-images.githubusercontent.com/62755456/127582755-df5a7502-6612-4007-a5dd-a019c066ee56.PNG)
 ![Routing_Table_3_fix](https://user-images.githubusercontent.com/62755456/127582641-90454ef1-c5f9-49ab-9e6d-08450c0c4e77.PNG)
 
 
