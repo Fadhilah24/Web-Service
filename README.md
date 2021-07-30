@@ -9,6 +9,7 @@ Sprint Backlog:
 - Sprint-2: https://drive.google.com/file/d/1r0si7fhTeAYf9ec60fyeudVnlXic21ag/view?usp=sharing
 - Sprint-3: https://drive.google.com/file/d/1mzURHlePDqHKGkuoqlPyfb-3RuVg-0OD/view?usp=sharing
 
+
 # Routing Table
 ![Routing_Table_1_fix](https://user-images.githubusercontent.com/62755456/127582624-9df3b7f1-a4c7-4fc6-befb-4c5bf93894c6.PNG)
 ![Routing_Table_2_fix](https://user-images.githubusercontent.com/62755456/127582755-df5a7502-6612-4007-a5dd-a019c066ee56.PNG)
@@ -27,6 +28,14 @@ Username dan Password Admin:
 Username dan Password User:
 - Username: fadhilahph
 - Password: vcg282ei58
+
+
+# Format data Json Sensor
+{
+
+ph : value
+
+
 # MVC(Model View Controller)
 ![mvc_sprint1](https://user-images.githubusercontent.com/62755456/127590719-415f8958-e377-440e-b26a-c5a9b245620a.PNG)
 
