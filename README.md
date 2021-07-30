@@ -10,9 +10,10 @@ Sprint Backlog:
 - Sprint-3: https://drive.google.com/file/d/1mzURHlePDqHKGkuoqlPyfb-3RuVg-0OD/view?usp=sharing
 
 # Routing Table
-![Routing_Table_1](https://user-images.githubusercontent.com/62755456/127277422-3e1e1c2f-76db-40a8-9aee-5221f2d132df.PNG)
-![Routing_Table_2](https://user-images.githubusercontent.com/62755456/127277442-0226fae3-f368-49c9-9f80-15eda2a5bee9.PNG)
-![Routing_Table_3](https://user-images.githubusercontent.com/62755456/127277450-57bc405f-5f0c-47f3-a03b-d82c80c44a5f.PNG)
+![Routing_Table_1_fix](https://user-images.githubusercontent.com/62755456/127582624-9df3b7f1-a4c7-4fc6-befb-4c5bf93894c6.PNG)
+![Routing_Table_2_fix](https://user-images.githubusercontent.com/62755456/127582636-e1211aec-ec80-4593-85e7-48ef3992a830.PNG)
+![Routing_Table_3_fix](https://user-images.githubusercontent.com/62755456/127582641-90454ef1-c5f9-49ab-9e6d-08450c0c4e77.PNG)
+
 
 # Panduan login website/aplikasi
 ![Login_page](https://user-images.githubusercontent.com/62755456/127580604-195c5d05-056e-438a-983e-ee3791657571.PNG)
