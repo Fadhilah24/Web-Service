@@ -42,6 +42,22 @@ suhu : value
 }
 
 
+# Type Data
+- id : int
+- username : varchar
+- password : varchar
+- nama_kolam : varchar
+- lokasi : varchar
+- tanggal_registrasi : date
+- idkolam : int
+- jenisikan : varchar
+- jumlah ikan : varchar
+- tanggalikanmasuk : date
+- ph : decimal
+- oksigen : decimal
+- suhu : decimal
+
+
 # MVC(Model View Controller)
 ![mvc_sprint1](https://user-images.githubusercontent.com/62755456/127590719-415f8958-e377-440e-b26a-c5a9b245620a.PNG)
 
