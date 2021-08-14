@@ -29,6 +29,8 @@ Username dan Password User:
 - Username: fadhilahph
 - Password: vcg282ei58
 
+Jika anda memakai Browser Google Chrome, pastikan anda menginstall extension cors unblock. Untuk cors unblock dapat di download di link berikut secara gratis:
+https://chrome.google.com/webstore/detail/cors-unblock/lfhmikememgdcahcdlaciloancbhjino.
 
 # Format data Json Sensor
 {
